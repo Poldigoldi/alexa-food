@@ -12,3 +12,8 @@ https://uob-my.sharepoint.com/:o:/r/personal/so18266_bristol_ac_uk/Documents/Pro
 
 Current endpoint if Server is running can be found at:
 https://fooddiary.hopto.org/server/
+
+
+Important Links:
+https://developer.amazon.com/docs/custom-skills/host-a-custom-skill-as-a-web-service.html
+https://alexa-skills-kit-sdk-for-java.readthedocs.io/en/latest/Servlet-Support.html
