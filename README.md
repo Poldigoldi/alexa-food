@@ -10,8 +10,8 @@ More info can be found in the notebook here:
 
 https://uob-my.sharepoint.com/:o:/r/personal/so18266_bristol_ac_uk/Documents/Project?d=w4475124d961048cbb726a0f7e11b59c4&csf=1&e=fBywjr
 
-Current endpoint if Server is running can be found at:
-https://fooddiary.hopto.org/server/
+Current endpoint of Server is running can be found at:
+https://4dbeff9c.ngrok.io/helloworldservlet/main
 
 
 Important Links:
