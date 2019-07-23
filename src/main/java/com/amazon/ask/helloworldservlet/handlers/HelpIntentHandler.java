@@ -30,10 +30,12 @@ public class HelpIntentHandler implements RequestHandler {
 
     @Override
     public Optional<Response> handle(HandlerInput input) {
-        String speechText = "Log food by telling me your user ID," +
+        String speechText = "Log food by telling me your " +
                 " what meal you had, " +
-                "the food it consisted of" +
-                " and the drink you had including its amount.";
+                "the food it consisted of," +
+                " and the drink you had, including its amount. Say something like " +
+                "'For breakfast I had toast and a cup of coffee.' " +
+                "Alternatively, say 'Log food' to manually enter the information.";
         return input.getResponseBuilder()
                 .withSpeech(speechText)
                 .withSimpleCard("HelloWorld", speechText)

@@ -43,37 +43,37 @@ public class LogFoodIntentHandler implements IntentRequestHandler {
     public Optional<Response> handle(HandlerInput handlerInput, IntentRequest intentRequest) {
         // This handler greets the user by name if it was provided, otherwise
         // just do a generic Hello World response
-
-        RequestHelper requestHelper = RequestHelper.forHandlerInput(handlerInput);
-
-        // Use a helper method to get the slot value wrapped in an Optional.
-        Optional<String> userIDValue = requestHelper.getSlotValue("userID");
-        Optional<String> mealValue = Optional.ofNullable(requestHelper.getSlot("meal")
-                .get()
-                .getResolutions()
-                .getResolutionsPerAuthority()
-                .get(0)
-                .getValues()
-                .get(0)
-                .getValue()
-                .getName());
-        Optional<String> foodValue = requestHelper.getSlotValue("food");
-        Optional<String> drinkValue = requestHelper.getSlotValue("drink");
-        Optional<String> amountValue = Optional.ofNullable(requestHelper.getSlot("amount")
-                .get()
-                .getResolutions()
-                .getResolutionsPerAuthority()
-                .get(0)
-                .getValues()
-                .get(0)
-                .getValue()
-                .getName());
-
-        Timestamp timestamp = new Timestamp(System.currentTimeMillis());
-        FoodItem foodItem = new FoodItem(userIDValue, mealValue, foodValue, drinkValue, amountValue, timestamp);
-
         String speechText;
+
         try {
+            RequestHelper requestHelper = RequestHelper.forHandlerInput(handlerInput);
+
+            // Use a helper method to get the slot value wrapped in an Optional.
+            Optional<String> userIDValue = requestHelper.getSlotValue("userID");
+            Optional<String> mealValue = Optional.ofNullable(requestHelper.getSlot("meal")
+                    .get()
+                    .getResolutions()
+                    .getResolutionsPerAuthority()
+                    .get(0)
+                    .getValues()
+                    .get(0)
+                    .getValue()
+                    .getName());
+            Optional<String> foodValue = requestHelper.getSlotValue("food");
+            Optional<String> drinkValue = requestHelper.getSlotValue("drink");
+            Optional<String> amountValue = Optional.ofNullable(requestHelper.getSlot("amount")
+                    .get()
+                    .getResolutions()
+                    .getResolutionsPerAuthority()
+                    .get(0)
+                    .getValues()
+                    .get(0)
+                    .getValue()
+                    .getName());
+
+            Timestamp timestamp = new Timestamp(System.currentTimeMillis());
+            FoodItem foodItem = new FoodItem(userIDValue, mealValue, foodValue, drinkValue, amountValue, timestamp);
+
             Database database = new Database("jdbc:mysql://localhost:3306/foodDiary?user=student");
             database.insertFoodItem(foodItem);
 
