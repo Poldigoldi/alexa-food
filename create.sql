@@ -1,11 +1,32 @@
-DROP TABLE IF EXISTS foodDiary;
+DROP TABLE IF EXISTS intakeEvents;
+DROP TABLE IF EXISTS drinks;
+DROP TABLE IF EXISTS foods;
+DROP TABLE IF EXISTS users;
 
-CREATE TABLE foodDiary (
+CREATE TABLE users (
+  id INTEGER AUTO_INCREMENT
+  , userID INT PRIMARY KEY NOT NULL
+);
+
+
+CREATE TABLE foods (
   id INTEGER PRIMARY KEY AUTO_INCREMENT
-  , userID INT NOT NULL
-  , meal TEXT
-  , food TEXT
-  , drink TEXT
-  , amount TEXT
-  , loggedAt TIMESTAMP
+  , loggedBy INT NOT NULL
+  , description TEXT NOT NULL
+  , FOREIGN KEY (loggedBy) REFERENCES users(userID)
+);
+
+CREATE TABLE drinks (
+  id INTEGER PRIMARY KEY AUTO_INCREMENT
+  , loggedBy INT NOT NULL
+  , description TEXT NOT NULL
+  , FOREIGN KEY (loggedBy) REFERENCES users(userID)
+);
+
+CREATE TABLE intakeEvents (
+  id INTEGER PRIMARY KEY AUTO_INCREMENT
+  , loggedBy INT NOT NULL
+  , tpye TEXT NOT NULL
+  , loggedAt TEXT NOT NULL
+  , FOREIGN KEY (loggedBy) REFERENCES users(userID)
 );
