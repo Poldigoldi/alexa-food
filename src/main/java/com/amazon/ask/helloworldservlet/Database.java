@@ -79,8 +79,7 @@ public class Database {
 
     public void updateUsers(int loggedBy) throws SQLException {
         PreparedStatement s = c.prepareStatement(
-                "INSERT INTO Users (userID)" +
-                        "VALUES (?)"
+                "INSERT INTO Users (userID) VALUES (?)"
         );
         s.setInt(1, loggedBy);
         s.execute();
