@@ -1,34 +1,29 @@
-DROP TABLE IF EXISTS intakeEvents;
-DROP TABLE IF EXISTS drinks;
-DROP TABLE IF EXISTS foods;
-DROP TABLE IF EXISTS users;
+DROP TABLE IF EXISTS IntakeEvents;
+DROP TABLE IF EXISTS Drinks;
+DROP TABLE IF EXISTS Foods;
+DROP TABLE IF EXISTS Users;
 
-CREATE TABLE users (
-  id INTEGER AUTO_INCREMENT
-  , userID INT PRIMARY KEY NOT NULL
+CREATE TABLE Users (
+    userID INT PRIMARY KEY NOT NULL
 );
 
-
-CREATE TABLE foods (
-  id INTEGER PRIMARY KEY AUTO_INCREMENT
-  , loggedBy INT NOT NULL
+CREATE TABLE Foods (
+    loggedBy INT NOT NULL
   , description TEXT NOT NULL
   , amount TEXT NOT NULL
-  , FOREIGN KEY (loggedBy) REFERENCES users(userID)
+  , FOREIGN KEY (loggedBy) REFERENCES Users(userID)
 );
 
-CREATE TABLE drinks (
-  id INTEGER PRIMARY KEY AUTO_INCREMENT
-  , loggedBy INT NOT NULL
+CREATE TABLE Drinks (
+    loggedBy INT NOT NULL
   , description TEXT NOT NULL
   , amount TEXT NOT NULL
-  , FOREIGN KEY (loggedBy) REFERENCES users(userID)
+  , FOREIGN KEY (loggedBy) REFERENCES Users(userID)
 );
 
-CREATE TABLE intakeEvents (
-  id INTEGER PRIMARY KEY AUTO_INCREMENT
-  , loggedBy INT NOT NULL
+CREATE TABLE IntakeEvents (
+    loggedBy INT NOT NULL
   , mealType TEXT NOT NULL
   , loggedAt TEXT NOT NULL
-  , FOREIGN KEY (loggedBy) REFERENCES users(userID)
+  , FOREIGN KEY (loggedBy) REFERENCES Users(userID)
 );

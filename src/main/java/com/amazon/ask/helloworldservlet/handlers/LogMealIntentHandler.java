@@ -27,7 +27,7 @@ import java.util.Optional;
 
 import static com.amazon.ask.request.Predicates.intentName;
 
-public class LogFoodIntentHandler implements IntentRequestHandler {
+public class LogMealIntentHandler implements IntentRequestHandler {
 
     //  Since this handler only needs to handle IntentRequest requests, it implement
     //  the typed request handler interface (IntentRequestHandler) instead
@@ -60,7 +60,8 @@ public class LogFoodIntentHandler implements IntentRequestHandler {
                     .getValue()
                     .getName());
             Optional<String> foodValue = requestHelper.getSlotValue("food");
-            Optional<String> amount_foodValue = Optional.ofNullable(requestHelper.getSlot("amount_food")
+            Optional<String> drinkValue = requestHelper.getSlotValue("drink");
+            Optional<String> amountValue = Optional.ofNullable(requestHelper.getSlot("amount")
                     .get()
                     .getResolutions()
                     .getResolutionsPerAuthority()
@@ -71,26 +72,26 @@ public class LogFoodIntentHandler implements IntentRequestHandler {
                     .getName());
 
             Timestamp timestamp = new Timestamp(System.currentTimeMillis());
-            FoodItem foodItem = new FoodItem(userIDValue, mealValue, foodValue, amount_foodValue, timestamp);
+            FoodItem foodItem = new FoodItem(userIDValue, mealValue, foodValue, drinkValue, amountValue, timestamp);
 
             Database database = new Database("jdbc:mysql://localhost:3306/foodDiary?user=student");
             database.insertFoodItem(foodItem);
-            database.updateUsers(foodItem.getUserID());
-            database.updateIntakeEvents(foodItem.getUserID(), mealValue, timestamp.toString());
 
             speechText =
                     userIDValue.map(userID -> "User ID logged as " + userID + "! ")
                             .orElse("User ID was not defined. ").concat(
-                    mealValue.map(meal -> "Meal type logged as " + meal + "! ")
-                            .orElse("Meal type was not defined. "))
-                    .concat(foodValue.map(food -> "Food logged was " + food + "! ")
-                            .orElse("Food was not defined. "))
-                    .concat(amount_foodValue.map(amount -> "Amount logged as " + amount + "! ")
-                            .orElse("Amount was not defined. "));
+                            mealValue.map(meal -> "Meal type logged as " + meal + "! ")
+                                    .orElse("Meal type was not defined. "))
+                            .concat(foodValue.map(food -> "Food logged was " + food + "! ")
+                                    .orElse("Food was not defined. "))
+                            .concat(drinkValue.map(drink -> "Drink logged as " + drink + "! ")
+                                    .orElse("Drink was not defined. "))
+                            .concat(amountValue.map(amount -> "Amount logged as " + amount + "! ")
+                                    .orElse("Amount was not defined. "));
 
             database.disconnect();
         } catch (SQLException e) {
-            speechText = "Oh, I'm sorry! There was a problem with logging your food item.";
+            speechText = "Oh, I'm sorry! There was a problem with logging your food.";
             e.printStackTrace();
         }
 

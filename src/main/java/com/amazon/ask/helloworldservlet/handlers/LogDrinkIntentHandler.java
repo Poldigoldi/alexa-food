@@ -16,6 +16,7 @@ package com.amazon.ask.helloworldservlet.handlers;
 import com.amazon.ask.dispatcher.request.handler.HandlerInput;
 import com.amazon.ask.dispatcher.request.handler.impl.IntentRequestHandler;
 import com.amazon.ask.helloworldservlet.Database;
+import com.amazon.ask.helloworldservlet.DrinkItem;
 import com.amazon.ask.helloworldservlet.FoodItem;
 import com.amazon.ask.model.IntentRequest;
 import com.amazon.ask.model.Response;
@@ -27,7 +28,7 @@ import java.util.Optional;
 
 import static com.amazon.ask.request.Predicates.intentName;
 
-public class LogFoodIntentHandler implements IntentRequestHandler {
+public class LogDrinkIntentHandler implements IntentRequestHandler {
 
     //  Since this handler only needs to handle IntentRequest requests, it implement
     //  the typed request handler interface (IntentRequestHandler) instead
@@ -36,7 +37,7 @@ public class LogFoodIntentHandler implements IntentRequestHandler {
 
     @Override
     public boolean canHandle(HandlerInput handlerInput, IntentRequest intentRequest) {
-        return handlerInput.matches(intentName("LogFoodIntent"));
+        return handlerInput.matches(intentName("LogDrinkIntent"));
     }
 
     @Override
@@ -59,8 +60,8 @@ public class LogFoodIntentHandler implements IntentRequestHandler {
                     .get(0)
                     .getValue()
                     .getName());
-            Optional<String> foodValue = requestHelper.getSlotValue("food");
-            Optional<String> amount_foodValue = Optional.ofNullable(requestHelper.getSlot("amount_food")
+            Optional<String> drinkValue = requestHelper.getSlotValue("drink");
+            Optional<String> amount_drinkValue = Optional.ofNullable(requestHelper.getSlot("amount_drink")
                     .get()
                     .getResolutions()
                     .getResolutionsPerAuthority()
@@ -71,26 +72,26 @@ public class LogFoodIntentHandler implements IntentRequestHandler {
                     .getName());
 
             Timestamp timestamp = new Timestamp(System.currentTimeMillis());
-            FoodItem foodItem = new FoodItem(userIDValue, mealValue, foodValue, amount_foodValue, timestamp);
+            DrinkItem drinkItem = new DrinkItem(userIDValue, mealValue, drinkValue, amount_drinkValue, timestamp);
 
             Database database = new Database("jdbc:mysql://localhost:3306/foodDiary?user=student");
-            database.insertFoodItem(foodItem);
-            database.updateUsers(foodItem.getUserID());
-            database.updateIntakeEvents(foodItem.getUserID(), mealValue, timestamp.toString());
+            database.insertDrinkItem(drinkItem);
+            database.updateIntakeEvents(drinkItem.getUserID(), mealValue, timestamp.toString());
+            database.updateUsers(drinkItem.getUserID());
 
             speechText =
                     userIDValue.map(userID -> "User ID logged as " + userID + "! ")
                             .orElse("User ID was not defined. ").concat(
-                    mealValue.map(meal -> "Meal type logged as " + meal + "! ")
-                            .orElse("Meal type was not defined. "))
-                    .concat(foodValue.map(food -> "Food logged was " + food + "! ")
-                            .orElse("Food was not defined. "))
-                    .concat(amount_foodValue.map(amount -> "Amount logged as " + amount + "! ")
-                            .orElse("Amount was not defined. "));
+                            mealValue.map(meal -> "Meal type logged as " + meal + "! ")
+                                    .orElse("Meal type was not defined. "))
+                            .concat(drinkValue.map(food -> "Drink logged was " + food + "! ")
+                                    .orElse("Drink was not defined. "))
+                            .concat(amount_drinkValue.map(amount -> "Amount logged as " + amount + "! ")
+                                    .orElse("Amount was not defined. "));
 
             database.disconnect();
         } catch (SQLException e) {
-            speechText = "Oh, I'm sorry! There was a problem with logging your food item.";
+            speechText = "Oh, I'm sorry! There was a problem with logging your food.";
             e.printStackTrace();
         }
 

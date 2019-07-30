@@ -3,8 +3,8 @@ package com.amazon.ask.helloworldservlet;
 import java.sql.Timestamp;
 import java.util.Optional;
 
-public class FoodItem {
-    private Optional<String> userID, meal, food, amount_food;
+public class DrinkItem {
+    private Optional<String> userID, meal, drink, amount_drink;
     private Timestamp loggedAt;
 
     public int getUserID() {
@@ -15,23 +15,23 @@ public class FoodItem {
         return meal;
     }
 
-    public Optional<String> getFood() {
-        return food;
+    public Optional<String> getDrink() {
+        return drink;
     }
 
-    public Optional<String> getAmount_food() {
-        return amount_food;
+    public Optional<String> getAmount_drink() {
+        return amount_drink;
     }
 
     public Timestamp getLoggedAt() {
         return loggedAt;
     }
 
-    public FoodItem(Optional<String> userID, Optional<String> meal, Optional<String> food, Optional<String> amount_food, Timestamp loggedAt) {
+    public DrinkItem(Optional<String> userID, Optional<String> meal, Optional<String> drink, Optional<String> amount_drink, Timestamp loggedAt) {
         this.userID = userID;
         this.meal = meal;
-        this.food = food;
-        this.amount_food = amount_food;
+        this.drink = drink;
+        this.amount_drink = amount_drink;
         this.loggedAt = loggedAt;
     }
 }

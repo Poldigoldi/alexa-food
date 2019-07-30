@@ -2,6 +2,7 @@ package com.amazon.ask.helloworldservlet;
 
 
 import java.sql.*;
+import java.util.Optional;
 
 public class Database {
     private Connection c;
@@ -25,37 +26,67 @@ public class Database {
     public void insertFoodItem(FoodItem foodItem) throws SQLException {
         String defaultString = "N/A";
         PreparedStatement s = c.prepareStatement(
-                "INSERT INTO foodDiary (userID, meal, food, drink, amount)" +
-                        "VALUES (?, ?, ?, ? ,?)"
+                "INSERT INTO Foods (loggedBy, description, amount)" +
+                        "VALUES (?, ?, ?)"
         );
-        if (foodItem.getUserID().isPresent()) {
-            s.setString(1, foodItem.getUserID().get());
-        } else {
-            s.setString(1, defaultString);
-        }
-        if (foodItem.getMeal().isPresent()) {
-            s.setString(2, foodItem.getMeal().get());
+        s.setInt(1, foodItem.getUserID());
+        if (foodItem.getFood().isPresent()) {
+            s.setString(2, foodItem.getFood().get());
         } else {
             s.setString(2, defaultString);
         }
-        if (foodItem.getFood().isPresent()) {
-            s.setString(3, foodItem.getFood().get());
+        if (foodItem.getAmount_food().isPresent()) {
+            s.setString(3, foodItem.getAmount_food().get());
         } else {
             s.setString(3, defaultString);
-        }
-        if (foodItem.getDrink().isPresent()) {
-            s.setString(4, foodItem.getDrink().get());
-        } else {
-            s.setString(4, defaultString);
-        }
-        if (foodItem.getAmount().isPresent()) {
-            s.setString(5, foodItem.getAmount().get());
-        } else {
-            s.setString(5, defaultString);
         }
         s.execute();
         s.close();
     }
+
+    public void insertDrinkItem(DrinkItem drinkItem) throws SQLException {
+        String defaultString = "N/A";
+        PreparedStatement s = c.prepareStatement(
+                "INSERT INTO Drinks (loggedBy, description, amount)" +
+                        "VALUES (?, ?, ?)"
+        );
+        s.setInt(1, drinkItem.getUserID());
+        if (drinkItem.getDrink().isPresent()) {
+            s.setString(2, drinkItem.getDrink().get());
+        } else {
+            s.setString(2, defaultString);
+        }
+        if (drinkItem.getAmount_drink().isPresent()) {
+            s.setString(3, drinkItem.getAmount_drink().get());
+        } else {
+            s.setString(3, defaultString);
+        }
+        s.execute();
+        s.close();
+    }
+
+    public void updateIntakeEvents(int loggedBy, Optional<String> mealType, String loggedAt) throws SQLException {
+        PreparedStatement s = c.prepareStatement(
+                "INSERT INTO IntakeEvents (loggedBy, mealType, loggedAt)" +
+                        "VALUES (?, ?, ?)"
+        );
+        s.setInt(1, loggedBy);
+        s.setString(2, String.valueOf(mealType));
+        s.setString(3, loggedAt);
+        s.execute();
+        s.close();
+    }
+
+    public void updateUsers(int loggedby) throws SQLException {
+        PreparedStatement s = c.prepareStatement(
+                "INSERT INTO Users (loggedBy)" +
+                        "VALUES (?)"
+        );
+        s.setInt(1, loggedby);
+        s.execute();
+        s.close();
+    }
+
 
     public void deleteLastEntry(String userID) throws SQLException {
         PreparedStatement s = c.prepareStatement(
