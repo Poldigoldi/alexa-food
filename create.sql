@@ -13,6 +13,7 @@ CREATE TABLE foods (
   id INTEGER PRIMARY KEY AUTO_INCREMENT
   , loggedBy INT NOT NULL
   , description TEXT NOT NULL
+  , amount TEXT NOT NULL
   , FOREIGN KEY (loggedBy) REFERENCES users(userID)
 );
 
@@ -20,13 +21,14 @@ CREATE TABLE drinks (
   id INTEGER PRIMARY KEY AUTO_INCREMENT
   , loggedBy INT NOT NULL
   , description TEXT NOT NULL
+  , amount TEXT NOT NULL
   , FOREIGN KEY (loggedBy) REFERENCES users(userID)
 );
 
 CREATE TABLE intakeEvents (
   id INTEGER PRIMARY KEY AUTO_INCREMENT
   , loggedBy INT NOT NULL
-  , tpye TEXT NOT NULL
+  , mealType TEXT NOT NULL
   , loggedAt TEXT NOT NULL
   , FOREIGN KEY (loggedBy) REFERENCES users(userID)
 );

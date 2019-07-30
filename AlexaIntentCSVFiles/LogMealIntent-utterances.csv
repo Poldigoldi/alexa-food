@@ -1,0 +1,25 @@
+﻿I had {amountDrink} {drink} and {amountFood} {food}
+I had {amountFood} {food} and {amountDrink} {drink}
+log {amountFood} of {food} and {amountDrink} {drink}
+I just had {amountFood} {food} and {amountDrink} {drink}
+for {meal} I had {amountFood} {food} and {amountDrink} {drink}
+let me log a meal
+manually log a meal
+manually log my food
+"I just ate "
+Log food
+I want to log a meal
+{meal} i am going to have {food} with a {amountDrink}  {drink}
+for {meal} I had an {food} and {amountDrink} {drink}
+for {meal} I had an {food} and {amountDrink} of {drink}
+at {meal} I had a {food} and a {drink}
+at {meal} I had a {food} and a {amountDrink} of {drink}
+at {meal} I had {food} and {drink}
+I just had {food} for {meal} with a {amountDrink} {drink}
+I just had {food} for {meal} with a {drink}
+I had a {food} and a {drink} for {meal}
+for {meal} I had {food} and {amountDrink} {drink}
+I had {food} and {amountDrink} {drink}
+I had {food} and {amountDrink} {drink} for {meal}
+I had {food} and {drink}
+For {meal} I had {food} and a {drink}
