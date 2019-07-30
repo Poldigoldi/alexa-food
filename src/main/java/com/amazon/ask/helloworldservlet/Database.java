@@ -77,12 +77,12 @@ public class Database {
         s.close();
     }
 
-    public void updateUsers(int loggedby) throws SQLException {
+    public void updateUsers(int loggedBy) throws SQLException {
         PreparedStatement s = c.prepareStatement(
-                "INSERT INTO Users (loggedBy)" +
+                "INSERT INTO Users (userID)" +
                         "VALUES (?)"
         );
-        s.setInt(1, loggedby);
+        s.setInt(1, loggedBy);
         s.execute();
         s.close();
     }

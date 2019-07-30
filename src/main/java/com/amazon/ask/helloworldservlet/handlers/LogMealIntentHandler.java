@@ -44,8 +44,8 @@ public class LogMealIntentHandler implements IntentRequestHandler {
     public Optional<Response> handle(HandlerInput handlerInput, IntentRequest intentRequest) {
         // This handler greets the user by name if it was provided, otherwise
         // just do a generic Hello World response
-        String speechText;
-
+        String speechText = "LogMealIntentHandler";
+/*
         try {
             RequestHelper requestHelper = RequestHelper.forHandlerInput(handlerInput);
 
@@ -62,7 +62,7 @@ public class LogMealIntentHandler implements IntentRequestHandler {
                     .getName());
             Optional<String> foodValue = requestHelper.getSlotValue("food");
             Optional<String> drinkValue = requestHelper.getSlotValue("drink");
-            Optional<String> amount_foodValue = Optional.ofNullable(requestHelper.getSlot("amount_food")
+            Optional<String> amount_foodValue = Optional.ofNullable(requestHelper.getSlot("amountFood")
                     .get()
                     .getResolutions()
                     .getResolutionsPerAuthority()
@@ -71,7 +71,7 @@ public class LogMealIntentHandler implements IntentRequestHandler {
                     .get(0)
                     .getValue()
                     .getName());
-            Optional<String> amount_drinkValue = Optional.ofNullable(requestHelper.getSlot("amount_drink")
+            Optional<String> amount_drinkValue = Optional.ofNullable(requestHelper.getSlot("amountDrink")
                     .get()
                     .getResolutions()
                     .getResolutionsPerAuthority()
@@ -111,7 +111,7 @@ public class LogMealIntentHandler implements IntentRequestHandler {
             speechText = "Oh, I'm sorry! There was a problem with logging your meal.";
             e.printStackTrace();
         }
-
+*/
         return handlerInput.getResponseBuilder()
                 .withSpeech(speechText)
                 .build();
