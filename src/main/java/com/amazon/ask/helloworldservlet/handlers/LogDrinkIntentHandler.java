@@ -75,8 +75,9 @@ public class LogDrinkIntentHandler implements IntentRequestHandler {
             DrinkItem drinkItem = new DrinkItem(userIDValue, mealValue, drinkValue, amount_drinkValue, timestamp);
 
             Database database = new Database("jdbc:mysql://localhost:3306/foodDiary?user=student");
-            database.insertDrinkItem(drinkItem);
+
             database.updateUsers(drinkItem.getUserID());
+            database.insertDrinkItem(drinkItem);
             database.updateIntakeEvents(drinkItem.getUserID(), Optional.of("Drink"), timestamp.toString());
 
             speechText =

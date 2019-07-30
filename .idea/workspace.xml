@@ -7,14 +7,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="91f7ef04-46a3-4c05-b41d-dff5e2127844" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/amazon/ask/helloworldservlet/DrinkItem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/amazon/ask/helloworldservlet/handlers/LogDrinkIntentHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/amazon/ask/helloworldservlet/handlers/LogMealIntentHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/create.sql" beforeDir="false" afterPath="$PROJECT_DIR$/create.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/amazon/ask/helloworldservlet/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/amazon/ask/helloworldservlet/Database.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/amazon/ask/helloworldservlet/FoodItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/amazon/ask/helloworldservlet/FoodItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/amazon/ask/helloworldservlet/handlers/LogDrinkIntentHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/amazon/ask/helloworldservlet/handlers/LogDrinkIntentHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/amazon/ask/helloworldservlet/handlers/LogFoodIntentHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/amazon/ask/helloworldservlet/handlers/LogFoodIntentHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/amazon/ask/helloworldservlet/handlers/LogMealIntentHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/amazon/ask/helloworldservlet/handlers/LogMealIntentHandler.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -46,8 +43,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/amazon/ask/helloworldservlet/handlers/LogFoodIntentHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="215">
-              <caret line="57" column="9" selection-start-line="57" selection-start-column="9" selection-end-line="57" selection-end-column="9" />
+            <state relative-caret-position="263">
+              <caret line="77" column="55" selection-start-line="77" selection-start-column="55" selection-end-line="77" selection-end-column="55" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/amazon/ask/helloworldservlet/handlers/LaunchRequestHandler.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="41" column="17" lean-forward="true" selection-start-line="41" selection-start-column="17" selection-end-line="41" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -55,8 +61,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/amazon/ask/helloworldservlet/Database.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="416">
-              <caret line="73" column="26" selection-start-line="73" selection-start-column="26" selection-end-line="73" selection-end-column="26" />
+            <state relative-caret-position="267">
+              <caret line="29" column="41" selection-start-line="28" selection-start-column="18" selection-end-line="29" selection-end-column="41" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -67,20 +73,16 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/amazon/ask/helloworldservlet/DrinkItem.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+            <state relative-caret-position="105">
+              <caret line="7" selection-start-line="7" selection-end-line="7" selection-end-column="31" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#249#250#0" expanded="true" />
                 <element signature="e#312#313#0" expanded="true" />
-                <element signature="e#330#331#0" expanded="true" />
-                <element signature="e#357#358#0" expanded="true" />
                 <element signature="e#399#400#0" expanded="true" />
                 <element signature="e#427#428#0" expanded="true" />
                 <element signature="e#476#477#0" expanded="true" />
                 <element signature="e#511#512#0" expanded="true" />
-                <element signature="e#549#550#0" expanded="true" />
-                <element signature="e#580#581#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -90,7 +92,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/com/amazon/ask/helloworldservlet/FoodItem.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="345">
-              <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+              <caret line="24" selection-start-line="24" selection-end-line="24" />
               <folding>
                 <element signature="e#244#245#0" expanded="true" />
                 <element signature="e#307#308#0" expanded="true" />
@@ -108,15 +110,6 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dockerStuff/Dockerfile">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" selection-start-line="12" selection-end-line="12" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/basicTomcatDocker/Dockerfile">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="120">
@@ -125,20 +118,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/create.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="2" lean-forward="true" selection-start-line="14" selection-start-column="2" selection-end-line="14" selection-end-column="2" />
+            <state relative-caret-position="375">
+              <caret line="25" column="4" selection-start-line="25" selection-start-column="4" selection-end-line="25" selection-end-column="4" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/amazon/ask/helloworldservlet/handlers/LogDrinkIntentHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="481">
-              <caret line="79" column="55" selection-start-line="79" selection-start-column="55" selection-end-line="79" selection-end-column="55" />
+            <state relative-caret-position="416">
+              <caret line="77" selection-start-line="77" selection-end-line="77" />
             </state>
           </provider>
         </entry>
@@ -146,8 +139,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/amazon/ask/helloworldservlet/handlers/LogMealIntentHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="29" column="33" selection-start-line="29" selection-start-column="33" selection-end-line="29" selection-end-column="33" />
+            <state relative-caret-position="716">
+              <caret line="89" column="55" selection-start-line="89" selection-start-column="55" selection-end-line="89" selection-end-column="55" />
             </state>
           </provider>
         </entry>
@@ -155,8 +148,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/amazon/ask/helloworldservlet/HelloWorldSkillServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="33" column="28" selection-start-line="33" selection-start-column="28" selection-end-line="33" selection-end-column="28" />
+            <state relative-caret-position="270">
+              <caret line="34" column="51" selection-start-line="34" selection-start-column="51" selection-end-line="34" selection-end-column="51" />
             </state>
           </provider>
         </entry>
@@ -192,7 +185,6 @@
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/src/main/java/com/amazon/ask/helloworldservlet/HelloWorldSkillServlet.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/amazon/ask/helloworldservlet/handlers/FallbackIntentHandler.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/amazon/ask/helloworldservlet/handlers/HelpIntentHandler.java" />
         <option value="$PROJECT_DIR$/Dockerfile" />
@@ -203,13 +195,14 @@
         <option value="$PROJECT_DIR$/dockerStuff/server.xml" />
         <option value="$PROJECT_DIR$/basicTomcatDocker/server.xml" />
         <option value="$PROJECT_DIR$/basicTomcatDocker/Dockerfile" />
+        <option value="$PROJECT_DIR$/src/main/java/com/amazon/ask/helloworldservlet/FoodItem.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/amazon/ask/helloworldservlet/Database.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/amazon/ask/helloworldservlet/DrinkItem.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/amazon/ask/helloworldservlet/HelloWorldSkillServlet.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/amazon/ask/helloworldservlet/handlers/LogFoodIntentHandler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/amazon/ask/helloworldservlet/handlers/LogDrinkIntentHandler.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/amazon/ask/helloworldservlet/handlers/LogMealIntentHandler.java" />
         <option value="$PROJECT_DIR$/create.sql" />
-        <option value="$PROJECT_DIR$/src/main/java/com/amazon/ask/helloworldservlet/FoodItem.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/amazon/ask/helloworldservlet/DrinkItem.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/amazon/ask/helloworldservlet/handlers/LogFoodIntentHandler.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/amazon/ask/helloworldservlet/Database.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/amazon/ask/helloworldservlet/handlers/LogDrinkIntentHandler.java" />
       </list>
     </option>
   </component>
@@ -442,7 +435,7 @@
       <workItem from="1560606972426" duration="1966000" />
       <workItem from="1563799502825" duration="200000" />
       <workItem from="1563799738511" duration="11480000" />
-      <workItem from="1564393911511" duration="12409000" />
+      <workItem from="1564393911511" duration="14702000" />
     </task>
     <task id="LOCAL-00001" summary="updated README">
       <created>1560764208763</created>
@@ -584,11 +577,25 @@
       <option name="project" value="LOCAL" />
       <updated>1564478255493</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="added new intenthandlers with methods to fill new tables in database">
+      <created>1564481392162</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1564481392162</updated>
+    </task>
+    <task id="LOCAL-00022" summary="implemented new database integration">
+      <created>1564482407863</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1564482407863</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34875000" />
+    <option name="totallyTimeSpent" value="37168000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -645,7 +652,9 @@
     <MESSAGE value="added dockerStuff and UML diagram" />
     <MESSAGE value="updated UML" />
     <MESSAGE value="changed create.sql script and added backup alexa CSV files for model building" />
-    <option name="LAST_COMMIT_MESSAGE" value="changed create.sql script and added backup alexa CSV files for model building" />
+    <MESSAGE value="added new intenthandlers with methods to fill new tables in database" />
+    <MESSAGE value="implemented new database integration" />
+    <option name="LAST_COMMIT_MESSAGE" value="implemented new database integration" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/java/HelloWorldSkillServlet.java" />
@@ -725,13 +734,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/amazon/ask/helloworldservlet/handlers/LaunchRequestHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="27" column="13" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dockerStuff/web.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
@@ -773,61 +775,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/amazon/ask/helloworldservlet/HelloWorldSkillServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="33" column="28" selection-start-line="33" selection-start-column="28" selection-end-line="33" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/amazon/ask/helloworldservlet/handlers/LogMealIntentHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="29" column="33" selection-start-line="29" selection-start-column="33" selection-end-line="29" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/create.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="2" lean-forward="true" selection-start-line="14" selection-start-column="2" selection-end-line="14" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/amazon/ask/helloworldservlet/Database.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="416">
-          <caret line="73" column="26" selection-start-line="73" selection-start-column="26" selection-end-line="73" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/amazon/ask/helloworldservlet/DrinkItem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#249#250#0" expanded="true" />
-            <element signature="e#312#313#0" expanded="true" />
-            <element signature="e#330#331#0" expanded="true" />
-            <element signature="e#357#358#0" expanded="true" />
-            <element signature="e#399#400#0" expanded="true" />
-            <element signature="e#427#428#0" expanded="true" />
-            <element signature="e#476#477#0" expanded="true" />
-            <element signature="e#511#512#0" expanded="true" />
-            <element signature="e#549#550#0" expanded="true" />
-            <element signature="e#580#581#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/amazon/ask/helloworldservlet/FoodItem.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
-          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+          <caret line="24" selection-start-line="24" selection-end-line="24" />
           <folding>
             <element signature="e#244#245#0" expanded="true" />
             <element signature="e#307#308#0" expanded="true" />
@@ -843,17 +794,71 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/amazon/ask/helloworldservlet/DrinkItem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" selection-start-line="7" selection-end-line="7" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#249#250#0" expanded="true" />
+            <element signature="e#312#313#0" expanded="true" />
+            <element signature="e#399#400#0" expanded="true" />
+            <element signature="e#427#428#0" expanded="true" />
+            <element signature="e#476#477#0" expanded="true" />
+            <element signature="e#511#512#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/amazon/ask/helloworldservlet/HelloWorldSkillServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="34" column="51" selection-start-line="34" selection-start-column="51" selection-end-line="34" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/amazon/ask/helloworldservlet/handlers/LaunchRequestHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="41" column="17" lean-forward="true" selection-start-line="41" selection-start-column="17" selection-end-line="41" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/amazon/ask/helloworldservlet/Database.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="267">
+          <caret line="29" column="41" selection-start-line="28" selection-start-column="18" selection-end-line="29" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/amazon/ask/helloworldservlet/handlers/LogFoodIntentHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="215">
-          <caret line="57" column="9" selection-start-line="57" selection-start-column="9" selection-end-line="57" selection-end-column="9" />
+        <state relative-caret-position="263">
+          <caret line="77" column="55" selection-start-line="77" selection-start-column="55" selection-end-line="77" selection-end-column="55" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/amazon/ask/helloworldservlet/handlers/LogDrinkIntentHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="481">
-          <caret line="79" column="55" selection-start-line="79" selection-start-column="55" selection-end-line="79" selection-end-column="55" />
+        <state relative-caret-position="416">
+          <caret line="77" selection-start-line="77" selection-end-line="77" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/amazon/ask/helloworldservlet/handlers/LogMealIntentHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="716">
+          <caret line="89" column="55" selection-start-line="89" selection-start-column="55" selection-end-line="89" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/create.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="4" selection-start-line="25" selection-start-column="4" selection-end-line="25" selection-end-column="4" />
         </state>
       </provider>
     </entry>
