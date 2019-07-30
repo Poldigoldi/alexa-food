@@ -76,8 +76,8 @@ public class LogDrinkIntentHandler implements IntentRequestHandler {
 
             Database database = new Database("jdbc:mysql://localhost:3306/foodDiary?user=student");
             database.insertDrinkItem(drinkItem);
-            database.updateIntakeEvents(drinkItem.getUserID(), mealValue, timestamp.toString());
             database.updateUsers(drinkItem.getUserID());
+            database.updateIntakeEvents(drinkItem.getUserID(), Optional.of("Drink"), timestamp.toString());
 
             speechText =
                     userIDValue.map(userID -> "User ID logged as " + userID + "! ")
@@ -91,7 +91,7 @@ public class LogDrinkIntentHandler implements IntentRequestHandler {
 
             database.disconnect();
         } catch (SQLException e) {
-            speechText = "Oh, I'm sorry! There was a problem with logging your food.";
+            speechText = "Oh, I'm sorry! There was a problem with logging your drink item.";
             e.printStackTrace();
         }
 

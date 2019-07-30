@@ -76,7 +76,7 @@ public class LogFoodIntentHandler implements IntentRequestHandler {
             Database database = new Database("jdbc:mysql://localhost:3306/foodDiary?user=student");
             database.insertFoodItem(foodItem);
             database.updateUsers(foodItem.getUserID());
-            database.updateIntakeEvents(foodItem.getUserID(), mealValue, timestamp.toString());
+            database.updateIntakeEvents(foodItem.getUserID(), Optional.of("Food"), timestamp.toString());
 
             speechText =
                     userIDValue.map(userID -> "User ID logged as " + userID + "! ")

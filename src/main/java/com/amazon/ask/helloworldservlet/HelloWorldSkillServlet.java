@@ -31,6 +31,8 @@ public class HelloWorldSkillServlet extends SkillServlet {
                         new HelpIntentHandler(),
                         new LaunchRequestHandler(),
                         new LogFoodIntentHandler(),
+                        new LogDrinkIntentHandler(),
+                        new LogMealIntentHandler(),
                         new FallbackIntentHandler(),
                         new DeleteLastEntryIntent(),
                         new SessionEndedRequestHandler())

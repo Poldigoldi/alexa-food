@@ -11,20 +11,12 @@ public class DrinkItem {
         return Integer.parseInt(String.valueOf(userID));
     }
 
-    public Optional<String> getMeal() {
-        return meal;
-    }
-
     public Optional<String> getDrink() {
         return drink;
     }
 
     public Optional<String> getAmount_drink() {
         return amount_drink;
-    }
-
-    public Timestamp getLoggedAt() {
-        return loggedAt;
     }
 
     public DrinkItem(Optional<String> userID, Optional<String> meal, Optional<String> drink, Optional<String> amount_drink, Timestamp loggedAt) {

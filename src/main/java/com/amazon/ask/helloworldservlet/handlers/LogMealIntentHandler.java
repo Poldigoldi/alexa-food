@@ -16,6 +16,7 @@ package com.amazon.ask.helloworldservlet.handlers;
 import com.amazon.ask.dispatcher.request.handler.HandlerInput;
 import com.amazon.ask.dispatcher.request.handler.impl.IntentRequestHandler;
 import com.amazon.ask.helloworldservlet.Database;
+import com.amazon.ask.helloworldservlet.DrinkItem;
 import com.amazon.ask.helloworldservlet.FoodItem;
 import com.amazon.ask.model.IntentRequest;
 import com.amazon.ask.model.Response;
@@ -36,7 +37,7 @@ public class LogMealIntentHandler implements IntentRequestHandler {
 
     @Override
     public boolean canHandle(HandlerInput handlerInput, IntentRequest intentRequest) {
-        return handlerInput.matches(intentName("LogFoodIntent"));
+        return handlerInput.matches(intentName("LogMealIntent"));
     }
 
     @Override
@@ -61,7 +62,16 @@ public class LogMealIntentHandler implements IntentRequestHandler {
                     .getName());
             Optional<String> foodValue = requestHelper.getSlotValue("food");
             Optional<String> drinkValue = requestHelper.getSlotValue("drink");
-            Optional<String> amountValue = Optional.ofNullable(requestHelper.getSlot("amount")
+            Optional<String> amount_foodValue = Optional.ofNullable(requestHelper.getSlot("amount_food")
+                    .get()
+                    .getResolutions()
+                    .getResolutionsPerAuthority()
+                    .get(0)
+                    .getValues()
+                    .get(0)
+                    .getValue()
+                    .getName());
+            Optional<String> amount_drinkValue = Optional.ofNullable(requestHelper.getSlot("amount_drink")
                     .get()
                     .getResolutions()
                     .getResolutionsPerAuthority()
@@ -72,10 +82,14 @@ public class LogMealIntentHandler implements IntentRequestHandler {
                     .getName());
 
             Timestamp timestamp = new Timestamp(System.currentTimeMillis());
-            FoodItem foodItem = new FoodItem(userIDValue, mealValue, foodValue, drinkValue, amountValue, timestamp);
+            FoodItem foodItem = new FoodItem(userIDValue, mealValue, foodValue, amount_foodValue, timestamp);
+            DrinkItem drinkItem = new DrinkItem(userIDValue, mealValue, drinkValue, amount_foodValue, timestamp);
 
             Database database = new Database("jdbc:mysql://localhost:3306/foodDiary?user=student");
             database.insertFoodItem(foodItem);
+            database.insertDrinkItem(drinkItem);
+            database.updateUsers(foodItem.getUserID());
+            database.updateIntakeEvents(foodItem.getUserID(), Optional.of("Food/Drink"), timestamp.toString());
 
             speechText =
                     userIDValue.map(userID -> "User ID logged as " + userID + "! ")
@@ -85,13 +99,15 @@ public class LogMealIntentHandler implements IntentRequestHandler {
                             .concat(foodValue.map(food -> "Food logged was " + food + "! ")
                                     .orElse("Food was not defined. "))
                             .concat(drinkValue.map(drink -> "Drink logged as " + drink + "! ")
-                                    .orElse("Drink was not defined. "))
-                            .concat(amountValue.map(amount -> "Amount logged as " + amount + "! ")
-                                    .orElse("Amount was not defined. "));
+                                    .orElse("Food was not defined. "))
+                            .concat(amount_foodValue.map(amount -> "Food amount logged as " + amount + "! ")
+                                    .orElse("Food amount was not defined. "))
+                            .concat(amount_drinkValue.map(amount -> "Drink amount logged as " + amount + "! ")
+                                    .orElse("Drink amount was not defined. "));
 
             database.disconnect();
         } catch (SQLException e) {
-            speechText = "Oh, I'm sorry! There was a problem with logging your food.";
+            speechText = "Oh, I'm sorry! There was a problem with logging your meal.";
             e.printStackTrace();
         }
 
