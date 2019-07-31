@@ -5,7 +5,7 @@ DROP TABLE IF EXISTS Users;
 
 
 CREATE TABLE Users (
-    userID INT NOT NULL
+    userID INT NOT NULL PRIMARY KEY
 );
 
 CREATE TABLE IntakeEvents (
@@ -13,6 +13,7 @@ CREATE TABLE IntakeEvents (
   , loggedBy INT NOT NULL
   , mealType TEXT NOT NULL
   , loggedAt TEXT NOT NULL
+  , FOREIGN KEY (loggedBy) REFERENCES Users(userID)
 );
 
 CREATE TABLE Foods (

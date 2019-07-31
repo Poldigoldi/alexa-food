@@ -58,14 +58,17 @@ public class LogDrinkIntentHandler implements IntentRequestHandler {
 
             Timestamp timestamp = new Timestamp(System.currentTimeMillis());
             int eventID = ThreadLocalRandom.current().nextInt();
+            if (eventID < 0) {
+                eventID = eventID * -1;
+            }
             DrinkItem drinkItem = new DrinkItem(mealValue, drinkValue, amount_drinkValue, eventID, timestamp);
 
             Database database = new Database("jdbc:mysql://localhost:3306/foodDiary?user=student");
 
             database.connect();
-            database.updateUsers(drinkItem.getEventId());
-            database.insertDrinkItem(drinkItem);
+            database.updateUsers(Integer.parseInt(userIDValue.get()));
             database.updateIntakeEvents(eventID, Integer.parseInt(userIDValue.get()), Optional.of("Drink"), timestamp.toString());
+            database.insertDrinkItem(drinkItem);
 
             speechText =
                     userIDValue.map(userID -> "User ID logged as " + userID + "! ")

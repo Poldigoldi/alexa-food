@@ -71,6 +71,9 @@ public class LogMealIntentHandler implements IntentRequestHandler {
 
             Timestamp timestamp = new Timestamp(System.currentTimeMillis());
             int eventID = ThreadLocalRandom.current().nextInt();
+            if (eventID < 0) {
+                eventID = eventID * -1;
+            }
             FoodItem foodItem = new FoodItem(mealValue, foodValue, amount_foodValue, eventID, timestamp);
             DrinkItem drinkItem = new DrinkItem(mealValue, drinkValue, amount_foodValue, eventID, timestamp);
 
@@ -78,9 +81,9 @@ public class LogMealIntentHandler implements IntentRequestHandler {
 
             database.connect();
             database.updateUsers(foodItem.getEventId());
+            database.updateIntakeEvents(eventID, Integer.parseInt(userIDValue.get()), Optional.of("Food/Drink"), timestamp.toString());
             database.insertFoodItem(foodItem);
             database.insertDrinkItem(drinkItem);
-            database.updateIntakeEvents(eventID, Integer.parseInt(userIDValue.get()), Optional.of("Food/Drink"), timestamp.toString());
 
             speechText =
                     userIDValue.map(userID -> "User ID logged as " + userID + "! ")
