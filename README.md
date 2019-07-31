@@ -15,7 +15,26 @@ https://4dbeff9c.ngrok.io/helloworldservlet/main
 
 The database used to store the meal data is mySQL with a structure of:
 
-id | userID | meal | food | drink | amount | loggedAt
+4 Tables:
+
+Users
+- userID
+
+IntakeEvents
+- id
+- loggedBy
+- mealType
+- loggedAt
+
+Foods
+- eventID
+- description
+- amount
+
+Drinks
+- eventID
+- description
+- amount
 
 Important Links:
 https://developer.amazon.com/docs/custom-skills/host-a-custom-skill-as-a-web-service.html
