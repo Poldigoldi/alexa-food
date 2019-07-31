@@ -79,12 +79,21 @@ public class Database {
     }
 
     public void updateUsers(int loggedBy) throws SQLException {
-        PreparedStatement s = c.prepareStatement(
-                "INSERT INTO Users (userID) VALUES (?)"
+        PreparedStatement s1 = c.prepareStatement(
+                "SELECT * FROM Users WHERE userID = ?"
         );
-        s.setInt(1, loggedBy);
-        s.execute();
-        s.close();
+        s1.setInt(1, loggedBy);
+
+        ResultSet rs = s1.executeQuery();
+        if (!rs.next()) {
+            PreparedStatement s = c.prepareStatement(
+                    "INSERT INTO Users (userID) VALUES (?)"
+            );
+            s.setInt(1, loggedBy);
+            s.execute();
+            s.close();
+        }
+        s1.close();
     }
 
 
