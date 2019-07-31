@@ -11,6 +11,7 @@ import com.amazon.ask.request.RequestHelper;
 import java.sql.SQLException;
 import java.sql.Timestamp;
 import java.util.Optional;
+import java.util.concurrent.ThreadLocalRandom;
 
 import static com.amazon.ask.request.Predicates.intentName;
 
@@ -56,14 +57,15 @@ public class LogDrinkIntentHandler implements IntentRequestHandler {
                     .getName());
 
             Timestamp timestamp = new Timestamp(System.currentTimeMillis());
-            DrinkItem drinkItem = new DrinkItem(userIDValue, mealValue, drinkValue, amount_drinkValue, timestamp);
+            int eventID = ThreadLocalRandom.current().nextInt();
+            DrinkItem drinkItem = new DrinkItem(mealValue, drinkValue, amount_drinkValue, eventID, timestamp);
 
             Database database = new Database("jdbc:mysql://localhost:3306/foodDiary?user=student");
 
             database.connect();
-            database.updateUsers(drinkItem.getUserID());
+            database.updateUsers(drinkItem.getEventId());
             database.insertDrinkItem(drinkItem);
-            database.updateIntakeEvents(drinkItem.getUserID(), Optional.of("Drink"), timestamp.toString());
+            database.updateIntakeEvents(eventID, Integer.parseInt(userIDValue.get()), Optional.of("Drink"), timestamp.toString());
 
             speechText =
                     userIDValue.map(userID -> "User ID logged as " + userID + "! ")

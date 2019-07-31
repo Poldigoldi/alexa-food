@@ -27,10 +27,10 @@ public class Database {
     public void insertFoodItem(FoodItem foodItem) throws SQLException {
         String defaultString = "N/A";
         PreparedStatement s = c.prepareStatement(
-                "INSERT INTO Foods (loggedBy, description, amount)" +
+                "INSERT INTO Foods (eventID, description, amount)" +
                         "VALUES (?, ?, ?)"
         );
-        s.setInt(1, foodItem.getUserID());
+        s.setInt(1, foodItem.getEventId());
         if (foodItem.getFood().isPresent()) {
             s.setString(2, foodItem.getFood().get());
         } else {
@@ -48,10 +48,10 @@ public class Database {
     public void insertDrinkItem(DrinkItem drinkItem) throws SQLException {
         String defaultString = "N/A";
         PreparedStatement s = c.prepareStatement(
-                "INSERT INTO Drinks (loggedBy, description, amount)" +
+                "INSERT INTO Drinks (eventID, description, amount)" +
                         "VALUES (?, ?, ?)"
         );
-        s.setInt(1, drinkItem.getUserID());
+        s.setInt(1, drinkItem.getEventId());
         if (drinkItem.getDrink().isPresent()) {
             s.setString(2, drinkItem.getDrink().get());
         } else {
@@ -66,14 +66,15 @@ public class Database {
         s.close();
     }
 
-    public void updateIntakeEvents(int loggedBy, Optional<String> mealType, String loggedAt) throws SQLException {
+    public void updateIntakeEvents(int eventID, int loggedBy, Optional<String> mealType, String loggedAt) throws SQLException {
         PreparedStatement s = c.prepareStatement(
-                "INSERT INTO IntakeEvents (loggedBy, mealType, loggedAt)" +
-                        "VALUES (?, ?, ?)"
+                "INSERT INTO IntakeEvents (id, loggedBy, mealType, loggedAt)" +
+                        "VALUES (?, ?, ?, ?)"
         );
-        s.setInt(1, loggedBy);
-        s.setString(2, mealType.get());
-        s.setString(3, loggedAt);
+        s.setInt(1, eventID);
+        s.setInt(2, loggedBy);
+        s.setString(3, mealType.get());
+        s.setString(4, loggedAt);
         s.execute();
         s.close();
     }
