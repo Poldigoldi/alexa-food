@@ -15,7 +15,6 @@ import java.util.Optional;
 import static com.amazon.ask.request.Predicates.intentName;
 
 public class LogDrinkIntentHandler implements IntentRequestHandler {
-
     //  Since this handler only needs to handle IntentRequest requests, it implement
     //  the typed request handler interface (IntentRequestHandler) instead
     //  of the generic interface (RequestHandler). This eliminates the need to
@@ -28,13 +27,14 @@ public class LogDrinkIntentHandler implements IntentRequestHandler {
 
     @Override
     public Optional<Response> handle(HandlerInput handlerInput, IntentRequest intentRequest) {
-        String speechText;
 
+        String speechText;
         try {
             RequestHelper requestHelper = RequestHelper.forHandlerInput(handlerInput);
 
             // Use a helper method to get the slot value wrapped in an Optional.
             Optional<String> userIDValue = requestHelper.getSlotValue("userID");
+
             Optional<String> mealValue = Optional.ofNullable(requestHelper.getSlot("meal")
                     .get()
                     .getResolutions()
@@ -60,9 +60,10 @@ public class LogDrinkIntentHandler implements IntentRequestHandler {
 
             Database database = new Database("jdbc:mysql://localhost:3306/foodDiary?user=student");
 
+            database.connect();
             database.updateUsers(drinkItem.getUserID());
-            //database.insertDrinkItem(drinkItem);
-            //database.updateIntakeEvents(drinkItem.getUserID(), Optional.of("Drink"), timestamp.toString());
+            database.insertDrinkItem(drinkItem);
+            database.updateIntakeEvents(drinkItem.getUserID(), Optional.of("Drink"), timestamp.toString());
 
             speechText =
                     userIDValue.map(userID -> "User ID logged as " + userID + "! ")

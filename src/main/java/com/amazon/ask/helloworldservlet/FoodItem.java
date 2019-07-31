@@ -8,7 +8,7 @@ public class FoodItem {
     private Timestamp loggedAt;
 
     public int getUserID() {
-        return Integer.parseInt(String.valueOf(userID));
+        return Integer.parseInt(userID.get());
     }
 
     public Optional<String> getMeal() {

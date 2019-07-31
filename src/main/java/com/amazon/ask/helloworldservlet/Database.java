@@ -12,10 +12,11 @@ public class Database {
     /*Connect immediately to database once it's constructed*/
     public Database(String connectionString) throws SQLException {
         this.connectionString = connectionString;
-        connect();
+        //connect();
     }
 
-    void connect() throws SQLException {
+
+    public void connect() throws SQLException {
         c = DriverManager.getConnection(connectionString);
     }
 
@@ -71,7 +72,7 @@ public class Database {
                         "VALUES (?, ?, ?)"
         );
         s.setInt(1, loggedBy);
-        s.setString(2, String.valueOf(mealType));
+        s.setString(2, mealType.get());
         s.setString(3, loggedAt);
         s.execute();
         s.close();

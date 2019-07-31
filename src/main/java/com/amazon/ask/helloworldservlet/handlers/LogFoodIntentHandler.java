@@ -30,13 +30,14 @@ public class LogFoodIntentHandler implements IntentRequestHandler {
     public Optional<Response> handle(HandlerInput handlerInput, IntentRequest intentRequest) {
         // This handler greets the user by name if it was provided, otherwise
         // just do a generic Hello World response
-        String speechText = "LogFoodIntentHandler";
-/*
+        String speechText;
+
         try {
             RequestHelper requestHelper = RequestHelper.forHandlerInput(handlerInput);
 
             // Use a helper method to get the slot value wrapped in an Optional.
             Optional<String> userIDValue = requestHelper.getSlotValue("userID");
+
             Optional<String> mealValue = Optional.ofNullable(requestHelper.getSlot("meal")
                     .get()
                     .getResolutions()
@@ -47,7 +48,7 @@ public class LogFoodIntentHandler implements IntentRequestHandler {
                     .getValue()
                     .getName());
             Optional<String> foodValue = requestHelper.getSlotValue("food");
-            Optional<String> amount_foodValue = Optional.ofNullable(requestHelper.getSlot("amountFood")
+            Optional<String> amount_foodValue = Optional.ofNullable(requestHelper.getSlot("amount_food")
                     .get()
                     .getResolutions()
                     .getResolutionsPerAuthority()
@@ -62,6 +63,7 @@ public class LogFoodIntentHandler implements IntentRequestHandler {
 
             Database database = new Database("jdbc:mysql://localhost:3306/foodDiary?user=student");
 
+            database.connect();
             database.updateUsers(foodItem.getUserID());
             database.insertFoodItem(foodItem);
             database.updateIntakeEvents(foodItem.getUserID(), Optional.of("Food"), timestamp.toString());
@@ -81,7 +83,7 @@ public class LogFoodIntentHandler implements IntentRequestHandler {
             speechText = "Oh, I'm sorry! There was a problem with logging your food item.";
             e.printStackTrace();
         }
-*/
+
         return handlerInput.getResponseBuilder()
                 .withSpeech(speechText)
                 .build();
