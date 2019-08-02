@@ -9,6 +9,7 @@ import com.amazon.ask.model.Response;
 import com.amazon.ask.request.RequestHelper;
 
 import java.sql.SQLException;
+import java.sql.Time;
 import java.sql.Timestamp;
 import java.util.Optional;
 import java.util.concurrent.ThreadLocalRandom;
@@ -61,6 +62,8 @@ public class LogDrinkIntentHandler implements IntentRequestHandler {
             if (eventID < 0) {
                 eventID = eventID * -1;
             }
+
+
             DrinkItem drinkItem = new DrinkItem(mealValue, drinkValue, amount_drinkValue, eventID, timestamp);
 
             Database database = new Database("jdbc:mysql://localhost:3306/foodDiary?user=student");
