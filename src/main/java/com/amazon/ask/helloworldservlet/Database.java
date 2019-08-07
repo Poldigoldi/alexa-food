@@ -10,7 +10,7 @@ public class Database {
 
 
     /*Connect immediately to database once it's constructed*/
-    public Database(String connectionString) throws SQLException {
+    public Database(String connectionString) {
         this.connectionString = connectionString;
         //connect();
     }
