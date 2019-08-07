@@ -51,13 +51,6 @@
        Documentation at /docs/config/service.html
    -->
   <Service name="Catalina">
-    <Connector
-	   protocol="org.apache.coyote.http11.Http11NioProtocol"
-	   port="443" maxThreads="200"
-	   scheme="https" secure="true" SSLEnabled="true"
-	   keystoreFile="conf/keystore.jks" keystorePass="Hnt1R69p"
-	   clientAuth="false" sslProtocol="TLS"/>
-
     <!--The connectors can use a shared executor, you can define one or more named thread pools-->
     <!--
     <Executor name="tomcatThreadPool" namePrefix="catalina-exec-"
@@ -74,7 +67,21 @@
     -->
     <Connector port="8080" protocol="HTTP/1.1"
                connectionTimeout="20000"
-               redirectPort="443" />
+               redirectPort="8443" />
+<!--
+    <Connector port="8443" protocol="org.apache.coyote.http11.Http11NioProtocol"
+          maxThreads="150" SSLEnabled="true" scheme="https" secure="true"
+          clientAuth="false" sslProtocol="TLS"
+          keyAlias="self_signed_tomcat" keystoreFile="conf/self_signed_tomcat.jks"
+          keystorePass="Hnt1R69p" />
+-->
+        <!-- Define a SSL Coyote HTTP/1.1 Connector on port 8443 -->
+    <Connector
+               protocol="org.apache.coyote.http11.Http11NioProtocol"
+               port="8443" maxThreads="200"
+               scheme="https" secure="true" SSLEnabled="true"
+               keystoreFile="conf/.keystore" keystorePass="Hnt1R69p"
+               clientAuth="false" sslProtocol="TLS"/>
     <!-- A "Connector" using the shared thread pool-->
     <!--
     <Connector executor="tomcatThreadPool"
