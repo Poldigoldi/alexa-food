@@ -27,8 +27,7 @@ public class Database {
     public void insertFoodItem(FoodItem foodItem) throws SQLException {
         String defaultString = "N/A";
         PreparedStatement s = c.prepareStatement(
-                "INSERT INTO Foods (eventID, description, amount)" +
-                        "VALUES (?, ?, ?)"
+                ""
         );
         s.setInt(1, foodItem.getEventId());
         if (foodItem.getFood().isPresent()) {
