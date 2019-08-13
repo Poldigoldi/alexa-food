@@ -7,11 +7,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="91f7ef04-46a3-4c05-b41d-dff5e2127844" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/dockerStuff/ssl.crt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dockerStuff/ssl.key" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dockerStuff/configuration.cnf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dockerStuff/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/dockerStuff/Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dockerStuff/server.xml" beforeDir="false" afterPath="$PROJECT_DIR$/dockerStuff/server.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dockerStuff/ssl.crt" beforeDir="false" afterPath="$PROJECT_DIR$/dockerStuff/ssl.crt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dockerStuff/ssl.key" beforeDir="false" afterPath="$PROJECT_DIR$/dockerStuff/ssl.key" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -52,16 +53,9 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/dockerStuff/Dockerfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="9" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
+            <state>
+              <caret selection-end-line="12" />
             </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dockerStuff/so18266@jojo.epi.bris.ac.uk">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1698" />
           </provider>
         </entry>
       </file>
@@ -75,6 +69,13 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dockerStuff/so18266@jojo.epi.bris.ac.uk">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1698" />
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
@@ -82,8 +83,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dockerStuff/server.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1260">
-              <caret line="84" column="3" selection-start-line="84" selection-start-column="3" selection-end-line="84" selection-end-column="3" />
+            <state relative-caret-position="255">
+              <caret line="94" column="62" lean-forward="true" selection-start-line="85" selection-start-column="4" selection-end-line="94" selection-end-column="62" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dockerStuff/configuration.cnf">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="11" lean-forward="true" selection-end-line="18" selection-end-column="27" />
             </state>
           </provider>
         </entry>
@@ -107,15 +117,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="735">
               <caret line="63" column="37" selection-start-line="63" selection-start-column="37" selection-end-line="63" selection-end-column="37" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/amazon/ask/helloworldservlet/handlers/LogDrinkIntentHandler.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="780">
-              <caret line="66" column="75" selection-start-line="66" selection-start-column="75" selection-end-line="66" selection-end-column="75" />
             </state>
           </provider>
         </entry>
@@ -168,8 +169,9 @@
         <option value="$PROJECT_DIR$/src/main/java/com/amazon/ask/helloworldservlet/handlers/LogDrinkIntentHandler.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/amazon/ask/helloworldservlet/handlers/LaunchRequestHandler.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/amazon/ask/helloworldservlet/Database.java" />
-        <option value="$PROJECT_DIR$/dockerStuff/server.xml" />
         <option value="$PROJECT_DIR$/dockerStuff/Dockerfile" />
+        <option value="$PROJECT_DIR$/dockerStuff/configuration.cnf" />
+        <option value="$PROJECT_DIR$/dockerStuff/server.xml" />
       </list>
     </option>
   </component>
@@ -403,13 +405,6 @@
       <workItem from="1563799738511" duration="11480000" />
       <workItem from="1564393911511" duration="14702000" />
       <workItem from="1565168971144" duration="376000" />
-    </task>
-    <task id="LOCAL-00001" summary="updated README">
-      <created>1560764208763</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1560764208763</updated>
     </task>
     <task id="LOCAL-00002" summary="updated README">
       <created>1560764352543</created>
@@ -747,14 +742,22 @@
       <option name="project" value="LOCAL" />
       <updated>1565615074919</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="changed docker stuff files">
+      <created>1565695858191</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1565695858192</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="59690000" />
+    <option name="totallyTimeSpent" value="61470000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27786753" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -817,7 +820,8 @@
     <MESSAGE value="updted poster" />
     <MESSAGE value="added new keystores" />
     <MESSAGE value="update thesis doc" />
-    <option name="LAST_COMMIT_MESSAGE" value="update thesis doc" />
+    <MESSAGE value="changed docker stuff files" />
+    <option name="LAST_COMMIT_MESSAGE" value="changed docker stuff files" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/java/HelloWorldSkillServlet.java" />
@@ -1035,22 +1039,8 @@
         <state relative-caret-position="-1698" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dockerStuff/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="30" column="34" selection-start-line="30" selection-start-column="18" selection-end-line="30" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dockerStuff/server.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1260">
-          <caret line="84" column="3" selection-start-line="84" selection-start-column="3" selection-end-line="84" selection-end-column="3" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/dockerStuff/context.xml">
       <provider selected="true" editor-type-id="text-editor">
@@ -1059,10 +1049,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/dockerStuff/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="30" column="34" selection-start-line="30" selection-start-column="18" selection-end-line="30" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dockerStuff/configuration.cnf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" lean-forward="true" selection-end-line="18" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dockerStuff/server.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="94" column="62" lean-forward="true" selection-start-line="85" selection-start-column="4" selection-end-line="94" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/dockerStuff/Dockerfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="9" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
+        <state>
+          <caret selection-end-line="12" />
         </state>
       </provider>
     </entry>

@@ -91,8 +91,8 @@
                scheme="https"
                secure="true"
                SSLEnabled="true"
-               SSLCertificateFile="conf/ssl.crt"
-               SSLCertificateKeyFile="conf/ssl.key" />
+               SSLCertificateFile="conf/certificate.pem"
+               SSLCertificateKeyFile="conf/private-key.pem" />
     <!-- A "Connector" using the shared thread pool-->
     <!--
     <Connector executor="tomcatThreadPool"
