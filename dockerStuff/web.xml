@@ -29,7 +29,7 @@ limitations under the License.
 
   <servlet>
     <servlet-name>helloworldservlet</servlet-name>
-    <servlet-class>HelloWorldSkillServlet</servlet-class>
+    <servlet-class>com.amazon.ask.helloworldservlet.HelloWorldSkillServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>helloworldservlet</servlet-name>

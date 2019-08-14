@@ -8,5 +8,6 @@ LABEL maintainer="leonard.c.goldschmidt@gmail.com"
 
 ADD helloworldservlet.war /usr/local/tomcat/webapps/
 
-EXPOSE 8080
+EXPOSE 443
+#EXPOSE 8080
 CMD ["catalina.sh", "run"]

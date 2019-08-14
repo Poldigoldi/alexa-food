@@ -16,4 +16,5 @@ extendedKeyUsage = serverAuth
 subjectAltName = @subject_alternate_names
 
 [subject_alternate_names]
-DNS.1 = jojo.epi.bris.ac.uk
+DNS.1 = alexa.mrsoftware.org
+DNS.2 = jojo.epi.bris.ac.uk
