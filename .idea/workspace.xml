@@ -9,11 +9,6 @@
     <list default="true" id="91f7ef04-46a3-4c05-b41d-dff5e2127844" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MSc Computer Science Thesis.docx" beforeDir="false" afterPath="$PROJECT_DIR$/MSc Computer Science Thesis.docx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dockerStuff/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/dockerStuff/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dockerStuff/certificate.pem" beforeDir="false" afterPath="$PROJECT_DIR$/dockerStuff/certificate.pem" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dockerStuff/configuration.cnf" beforeDir="false" afterPath="$PROJECT_DIR$/dockerStuff/configuration.cnf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dockerStuff/server.xml" beforeDir="false" afterPath="$PROJECT_DIR$/dockerStuff/server.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dockerStuff/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/dockerStuff/web.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -45,8 +40,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/dockerStuff/Dockerfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="3" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="3" />
+            <state relative-caret-position="180">
+              <caret line="12" column="19" selection-start-line="12" selection-end-line="13" />
             </state>
           </provider>
         </entry>
@@ -397,21 +392,7 @@
       <workItem from="1563799738511" duration="11480000" />
       <workItem from="1564393911511" duration="14702000" />
       <workItem from="1565168971144" duration="376000" />
-      <workItem from="1565789514606" duration="1100000" />
-    </task>
-    <task id="LOCAL-00003" summary="updated README">
-      <created>1560764476487</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1560764476487</updated>
-    </task>
-    <task id="LOCAL-00004" summary="updated README">
-      <created>1563799879448</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1563799879448</updated>
+      <workItem from="1565789514606" duration="2352000" />
     </task>
     <task id="LOCAL-00005" summary="updated README">
       <created>1563800077224</created>
@@ -742,11 +723,25 @@
       <option name="project" value="LOCAL" />
       <updated>1565702588039</updated>
     </task>
-    <option name="localTasksCounter" value="52" />
+    <task id="LOCAL-00052" summary="changed docker stuff files">
+      <created>1565795025773</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1565795025774</updated>
+    </task>
+    <task id="LOCAL-00053" summary="updated thesis doc">
+      <created>1565797449768</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1565797449768</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="65149000" />
+    <option name="totallyTimeSpent" value="66401000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -807,14 +802,14 @@
     <MESSAGE value="only adds new userID to Users tables" />
     <MESSAGE value="updated README" />
     <MESSAGE value="added report word doc" />
-    <MESSAGE value="updated thesis doc" />
     <MESSAGE value="added poster" />
     <MESSAGE value="added poster PDF" />
     <MESSAGE value="updted poster" />
     <MESSAGE value="added new keystores" />
     <MESSAGE value="update thesis doc" />
     <MESSAGE value="changed docker stuff files" />
-    <option name="LAST_COMMIT_MESSAGE" value="changed docker stuff files" />
+    <MESSAGE value="updated thesis doc" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated thesis doc" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/java/HelloWorldSkillServlet.java" />
@@ -1075,8 +1070,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/dockerStuff/Dockerfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="3" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="3" />
+        <state relative-caret-position="180">
+          <caret line="12" column="19" selection-start-line="12" selection-end-line="13" />
         </state>
       </provider>
     </entry>
