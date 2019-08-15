@@ -8,7 +8,6 @@
   <component name="ChangeListManager">
     <list default="true" id="91f7ef04-46a3-4c05-b41d-dff5e2127844" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MSc Computer Science Thesis.docx" beforeDir="false" afterPath="$PROJECT_DIR$/MSc Computer Science Thesis.docx" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -392,14 +391,7 @@
       <workItem from="1563799738511" duration="11480000" />
       <workItem from="1564393911511" duration="14702000" />
       <workItem from="1565168971144" duration="376000" />
-      <workItem from="1565789514606" duration="2825000" />
-    </task>
-    <task id="LOCAL-00007" summary="implemented fallbackIntentHandler and changed help response">
-      <created>1563878497907</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1563878497908</updated>
+      <workItem from="1565789514606" duration="3057000" />
     </task>
     <task id="LOCAL-00008" summary="added dockerfile for creation of docker image">
       <created>1564051098856</created>
@@ -737,11 +729,18 @@
       <option name="project" value="LOCAL" />
       <updated>1565870070317</updated>
     </task>
-    <option name="localTasksCounter" value="56" />
+    <task id="LOCAL-00056" summary="updated thesis doc">
+      <created>1565873079108</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1565873079108</updated>
+    </task>
+    <option name="localTasksCounter" value="57" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="66874000" />
+    <option name="totallyTimeSpent" value="67106000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
