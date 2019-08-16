@@ -86,7 +86,8 @@ public class LogDrinkIntentHandler implements IntentRequestHandler {
             database.disconnect();
 
         } catch (SQLException e) {
-            speechText = "Oh, I'm sorry! There was a problem with logging your drink item.";
+            speechText = "Oh, I'm sorry! There was a problem with logging your drink item. Try logging it manually" +
+                    " by saying, Log Drink!";
             e.printStackTrace();
         }
         return handlerInput.getResponseBuilder()

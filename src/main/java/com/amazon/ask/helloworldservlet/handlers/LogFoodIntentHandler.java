@@ -85,7 +85,8 @@ public class LogFoodIntentHandler implements IntentRequestHandler {
 
             database.disconnect();
         } catch (SQLException e) {
-            speechText = "Oh, I'm sorry! There was a problem with logging your food item.";
+            speechText = "Oh, I'm sorry! There was a problem with logging your food item. Try logging it manually" +
+                    " by saying, Log Food!";
             e.printStackTrace();
         }
 
