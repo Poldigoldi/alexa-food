@@ -20,8 +20,8 @@ public class HelloWorldSkillServlet extends SkillServlet {
                         new LogFoodIntentHandler(),
                         new LogDrinkIntentHandler(),
                         new LogMealIntentHandler(),
-                        new FallbackIntentHandler(),
-                        new DeleteLastEntryIntent())
+                        new FallbackIntentHandler())
+                        //new DeleteLastEntryIntent()
                         //new SessionEndedRequestHandler())
                 .withSkillId("amzn1.ask.skill.8eaf479a-f394-4f6f-a138-e6642db0b299")
                 .build();

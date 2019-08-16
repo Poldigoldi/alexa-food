@@ -80,7 +80,7 @@ public class LogMealIntentHandler implements IntentRequestHandler {
             Database database = new Database("jdbc:mysql://localhost:3306/foodDiary?user=student");
 
             database.connect();
-            database.updateUsers(foodItem.getEventId());
+            database.updateUsers(Integer.parseInt(userIDValue.get()));
             database.updateIntakeEvents(eventID, Integer.parseInt(userIDValue.get()), Optional.of("Food/Drink"), timestamp.toString());
             database.insertFoodItem(foodItem);
             database.insertDrinkItem(drinkItem);
