@@ -33,7 +33,7 @@ public class LogDrinkIntentHandler implements IntentRequestHandler {
         String speechText;
         try {
             RequestHelper requestHelper = RequestHelper.forHandlerInput(handlerInput);
-
+            handlerInput.
             // Use a helper method to get the slot value wrapped in an Optional.
             Optional<String> userIDValue = requestHelper.getSlotValue("userID");
 
