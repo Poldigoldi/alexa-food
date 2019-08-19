@@ -8,7 +8,7 @@
   <component name="ChangeListManager">
     <list default="true" id="91f7ef04-46a3-4c05-b41d-dff5e2127844" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/~$c Computer Science Thesis.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MSc Computer Science Thesis.docx" beforeDir="false" afterPath="$PROJECT_DIR$/MSc Computer Science Thesis.docx" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -124,7 +124,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/com/amazon/ask/helloworldservlet/handlers/LogMealIntentHandler.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="319">
-              <caret line="86" lean-forward="true" selection-start-line="86" selection-end-line="86" />
+              <caret line="86" selection-start-line="86" selection-end-line="86" />
             </state>
           </provider>
         </entry>
@@ -446,14 +446,7 @@
       <workItem from="1564393911511" duration="14702000" />
       <workItem from="1565168971144" duration="376000" />
       <workItem from="1565789514606" duration="4632000" />
-      <workItem from="1565949310468" duration="3270000" />
-    </task>
-    <task id="LOCAL-00015" summary="added keystore for tomcats server.xml file">
-      <created>1564064242272</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1564064242272</updated>
+      <workItem from="1565949310468" duration="3562000" />
     </task>
     <task id="LOCAL-00016" summary="added server.xml to docker folder">
       <created>1564064526484</created>
@@ -791,11 +784,18 @@
       <option name="project" value="LOCAL" />
       <updated>1565961524580</updated>
     </task>
-    <option name="localTasksCounter" value="64" />
+    <task id="LOCAL-00064" summary="updated thesis dock">
+      <created>1566212882638</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1566212882638</updated>
+    </task>
+    <option name="localTasksCounter" value="65" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="71951000" />
+    <option name="totallyTimeSpent" value="72243000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -1109,7 +1109,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/amazon/ask/helloworldservlet/handlers/LogMealIntentHandler.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="319">
-          <caret line="86" lean-forward="true" selection-start-line="86" selection-end-line="86" />
+          <caret line="86" selection-start-line="86" selection-end-line="86" />
         </state>
       </provider>
     </entry>
