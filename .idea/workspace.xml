@@ -8,7 +8,7 @@
   <component name="ChangeListManager">
     <list default="true" id="91f7ef04-46a3-4c05-b41d-dff5e2127844" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/amazon/ask/helloworldservlet/handlers/LogDrinkIntentHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/amazon/ask/helloworldservlet/handlers/LogDrinkIntentHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MSc Computer Science Thesis.docx" beforeDir="false" afterPath="$PROJECT_DIR$/MSc Computer Science Thesis.docx" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -446,21 +446,7 @@
       <workItem from="1564393911511" duration="14702000" />
       <workItem from="1565168971144" duration="376000" />
       <workItem from="1565789514606" duration="4632000" />
-      <workItem from="1565949310468" duration="4453000" />
-    </task>
-    <task id="LOCAL-00018" summary="added dockerStuff and UML diagram">
-      <created>1564410597130</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1564410597130</updated>
-    </task>
-    <task id="LOCAL-00019" summary="updated UML">
-      <created>1564413257190</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1564413257190</updated>
+      <workItem from="1565949310468" duration="4840000" />
     </task>
     <task id="LOCAL-00020" summary="changed create.sql script and added backup alexa CSV files for model building">
       <created>1564478255493</created>
@@ -791,17 +777,30 @@
       <option name="project" value="LOCAL" />
       <updated>1566225030019</updated>
     </task>
-    <option name="localTasksCounter" value="67" />
+    <task id="LOCAL-00067" summary="updated thesis dock">
+      <created>1566225048768</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1566225048768</updated>
+    </task>
+    <task id="LOCAL-00068" summary="updated thesis dock">
+      <created>1566305926498</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1566305926498</updated>
+    </task>
+    <option name="localTasksCounter" value="69" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="73134000" />
+    <option name="totallyTimeSpent" value="73521000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28594506" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.28594506" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -822,7 +821,7 @@
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="11" />
       <window_info anchor="bottom" id="Database Changes" order="12" />
-      <window_info anchor="bottom" id="Version Control" order="13" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="13" visible="true" weight="0.32876712" />
       <window_info anchor="bottom" id="Java Enterprise" order="14" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
